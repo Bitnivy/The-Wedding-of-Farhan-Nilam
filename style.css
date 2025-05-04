@@ -1,0 +1,86 @@
+html, body{
+    scroll-behavior: smooth;
+}
+
+@media (orientation:portrait) {
+  .cont{
+    width: 100vw;
+    height: auto;
+  }
+}
+
+  @media (orientation:landscape){
+    .cont {
+      width: auto;
+      height: 100vw;
+    }
+  }
+  
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.cont{
+  aspect-ratio: 10/16;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffcce6;
+  overflow: hidden;
+}
+
+/* cover */
+.cont .cover{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: #5d0000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cont .cover .img_a{
+  width: 100%;
+  margin-top: 0px;
+}
+
+.cont .cover .isi_cover{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  color: #fff;
+}
+
+.cont .cover .isi_cover .img_b{
+  width: 20%;
+  margin-top: 7%;
+}
+  
+.cont .cover .isi_cover .kata_a{
+  font-size: 150%;
+  margin-bottom: -10%;
+}
+
+.cont .cover .isi_cover .kata_b{
+  font-size: 350%;
+  text-align: center;
+}
+
+.cont .cover .img_c{
+  width: 100%;
+}
+
+
+
+
