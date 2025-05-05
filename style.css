@@ -3,22 +3,32 @@ html, body{
 }
 
 @media (orientation:portrait) {
-  .cont{
+  .cover, .halaman_a, .halaman_b, .halaman_c{
     width: 100vw;
-    height: auto;
+    height: 154vw;
   }
 }
 
-  @media (orientation:landscape){
-    .cont {
-      width: auto;
-      height: 100vw;
-    }
+@media (orientation:landscape) {
+  .cover {
+    width: 100vw;
+    height: 165vw;
+  }
+}
+  
+  .efek{
+    opacity: 0;
+    transform: translateY(40%);
+    transition: all 0.6s ease-out;
+  }
+  
+  .efek .oke{
+    opacity: 1;
+    transform: translateY(0%);
   }
   
 body {
   width: 100vw;
-  height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -26,61 +36,98 @@ body {
   align-items: center;
   background: #ffffff;
 }
-
-.cont{
-  aspect-ratio: 10/16;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #ffcce6;
-  overflow: hidden;
-}
-
 /* cover */
-.cont .cover{
-  width: 100%;
-  height: 100%;
+.cover{
   display: flex;
   background: #5d0000;
+  background-size: cover;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
-.cont .cover .img_a{
+.cover .img_a{
   width: 100%;
   margin-top: 0px;
 }
 
-.cont .cover .isi_cover{
+.cover .isi_cover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 50%;
   color: #fff;
 }
 
-.cont .cover .isi_cover .img_b{
+.cover .isi_cover .img_b{
   width: 20%;
   margin-top: 7%;
 }
   
-.cont .cover .isi_cover .kata_a{
+.cover .isi_cover .kata_a{
   font-size: 150%;
   margin-bottom: -10%;
 }
 
-.cont .cover .isi_cover .kata_b{
+.cover .isi_cover .kata_b{
   font-size: 350%;
   text-align: center;
 }
 
-.cont .cover .img_c{
+.cover .img_c{
   width: 100%;
+  margin-bottom: 0px;
 }
 
+/* halaman_a */
+.halaman_a, .halaman_b, .halaman_c{
+  background: linear-gradient(to left, #856f43, #eddab0, #fbf6eb, #eddab0, #856f43);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.halaman_a .qs_a{
+  font-size: 120%;
+  text-align: center;
+  padding: 10%;
+}
+.halaman_a .qs{
+  font-size: 120%;
+  margin-top: -11%;
+}
 
-
-
+/* halaman_b */
+.halaman_b .img_a{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.halaman_b .salam, .halaman_b .kata_a, .halaman_c .kata_c{
+  font-size: 120%;
+  text-align: center;
+  padding: 10%;
+}
+.halaman_b .kata_a ){
+  margin-top: -20%;
+}
+.halaman_b .img_d, .halaman_b .img_e{
+  width: 85%;
+  margin-top: -10%;
+}
+.halaman_b .nama_a{
+  font-size: 250%;
+  
+}
+.halaman_b .nama_b{
+  font-size: 90%;
+  text-align: center;
+  padding: 10%;
+  margin-top: -20%;
+}
+.halaman_b .nama_c{
+  margin-bottom: -10%;
+  margin-top: -10%;
+  font-size: 250%;
+}
+/* halaman_c */
