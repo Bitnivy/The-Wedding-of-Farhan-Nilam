@@ -9,6 +9,13 @@ html, body{
   }
 }
 
+@media (orientation:portrait) {
+  .halaman_c{
+    width: 100vw;
+    height: 300vw;
+  }
+}
+
 @media (orientation:landscape) {
   .cover {
     width: 100vw;
