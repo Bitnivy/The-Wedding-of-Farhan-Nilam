@@ -43,6 +43,11 @@ html, body{
   src: url('Poppins.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Sangharia';
+  src: url('Sangharia.ttf') format('truetype');
+}
+
 @keyframes autoShowAnimation{
     from{
         opacity: 0;
@@ -60,6 +65,18 @@ html, body{
   to{
     transform: rotate(360deg);
   }
+}
+
+@keyframes autoBLurAnimation{
+    0%{
+        filter: blur(40px);
+    }
+    45%, 55%{
+        filter: blur(0px);
+    }
+    100%{
+        filter: blur(40px);
+    }
 }
   
 body {
@@ -145,15 +162,15 @@ body {
   padding: 10%;
   font-family: "Poppins";
   
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
+  animation: autoBLurAnimation linear both;
+    animation-timeline: view();
 }
 .halaman_a .qs{
   font-size: 70%;
   margin-top: -11%;
   
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
+  animation: autoBLurAnimation linear both;
+    animation-timeline: view();
 }
 
 /* halaman_b */
@@ -187,6 +204,8 @@ body {
 
 .halaman_b .img_d{
   width: 15%;
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
 
 .halaman_b .nama_a{
@@ -210,28 +229,37 @@ body {
   width: 5%;
   margin-bottom: -4%;
   margin-top: -10%;
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
 /* halaman_c */
 
 .halaman_c .kata_c{
   font-family: "Poppins";
-  
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
 
 .halaman_c .line_akad_a{
   width: 60%;
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
 
 .halaman_c .jadwal{
   font-size: 2.5em;
   text-align: center;
-  font-family: "";
+  font-family: "Sangharia";
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
 
 .halaman_c .isi{
   text-align: center;
   font-size: 0.7em;
   font-family: Poppins;
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
 
 .halaman_c .transisi{
@@ -242,9 +270,13 @@ body {
 
 .halaman_c .transisi_a{
   width: 10%;
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
 
 .halaman_c .line_akad_b{
   width: 60%;
   margin-bottom: 100%;
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
