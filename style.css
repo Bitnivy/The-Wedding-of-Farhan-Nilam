@@ -162,15 +162,15 @@ body {
   padding: 10%;
   font-family: "Poppins";
   
-  animation: autoBLurAnimation linear both;
-    animation-timeline: view();
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
 .halaman_a .qs{
   font-size: 70%;
   margin-top: -11%;
   
-  animation: autoBLurAnimation linear both;
-    animation-timeline: view();
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
 
 /* halaman_b */
