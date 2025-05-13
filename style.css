@@ -76,6 +76,7 @@ body {
   align-items: center;
   background: #ffffff;
 }
+
 /* cover */
 .cover{
   display: flex;
@@ -269,4 +270,28 @@ body {
   margin-bottom: 100%;
   animation: autoShowAnimation both;
   animation-timeline: view(70% 5%);
+}
+
+footer {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  background: #eddab0;
+  width: 100vw;
+  height: 12vw;
+  justify-content: center;
+  align-items: stretch;
+  bottom: 0px;
+  padding-top: 10px;
+  
+}
+
+button{
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #5d0000, #bf0000);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px 10px 0px 0px;
 }
