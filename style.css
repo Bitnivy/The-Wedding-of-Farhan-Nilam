@@ -3,7 +3,7 @@ html, body{
 }
 
 @media (orientation:portrait) {
-  .cover, .halaman_a, .halaman_b, .halaman_c{
+  .cover, .halaman_a, .halaman_b{
     width: 100vw;
     height: 154vw;
   }
@@ -240,7 +240,8 @@ body {
 .halaman_c .jadwal{
   font-size: 2.5em;
   text-align: center;
-  font-family: "Sangharia";
+  font-family: "Darrel";
+  margin-bottom: -5%;
   animation: autoShowAnimation both;
   animation-timeline: view(70% 5%);
 }
@@ -276,13 +277,11 @@ footer {
   position: fixed;
   display: flex;
   flex-direction: row;
-  background: #eddab0;
   width: 100vw;
   height: 12vw;
   justify-content: center;
   align-items: stretch;
   bottom: 0px;
-  padding-top: 10px;
   
 }
 
@@ -292,6 +291,11 @@ button{
   height: 100%;
   background: linear-gradient(to top, #5d0000, #bf0000);
   color: #fff;
-  border: 2px solid #fff;
-  border-radius: 10px 10px 0px 0px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-radius: 5px 5px 0px 0px;
+}
+
+button-hover{
+  background: #fff;
 }
