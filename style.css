@@ -3,16 +3,10 @@ html, body{
 }
 
 @media (orientation:portrait) {
-  .cover, .halaman_a, .halaman_b{
+  .cover, .halaman_a, .halaman_b, .halaman_c, .halaman_d{
     width: 100vw;
     height: 154vw;
-  }
-}
-
-@media (orientation:portrait) {
-  .halaman_c{
-    width: 100vw;
-    height: 300vw;
+    border: 1px solid #f00;
   }
 }
 
@@ -77,6 +71,23 @@ body {
   background: #ffffff;
 }
 
+.splash{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vh;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}.splash .cnt .spl{
+  width: 25%;
+  
+}
+
 /* cover */
 .cover{
   display: flex;
@@ -97,13 +108,6 @@ body {
 .cover  .img_b{
   width: 25%;
   margin-bottom: -8%;
-}
-
-.cover .material-symbols-outlined{
-  position: absolute;
-  transform: translateX(-50%);
-  bottom: 30%;
-  left: 50%;
 }
   
 .cover .line_cover{
@@ -140,7 +144,8 @@ body {
   border-radius: 30px 30px 0px 0px;
 }
 
-.halaman_a, .halaman_b, .halaman_c{
+.halaman_a, .halaman_b, .halaman_c, 
+.halaman_d{
   background: linear-gradient(to left, #856f43, #eddab0, #fbf6eb, #eddab0, #856f43);
   display: flex;
   flex-direction: column;
@@ -174,7 +179,7 @@ body {
   animation-timeline: view(70% 5%);
 }
 .halaman_b .salam, .halaman_b .kata_a, .halaman_c .kata_c{
-  font-size: 70%;
+  font-size: 0.9em;
   text-align: center;
   padding: 10%;
   
@@ -231,22 +236,48 @@ body {
   animation-timeline: view(70% 5%);
 }
 
-.halaman_c .line_akad_a{
+.halaman_c .line_akad{
   width: 60%;
   animation: autoShowAnimation both;
   animation-timeline: view(70% 5%);
 }
 
-.halaman_c .jadwal{
+.halaman_c .akad{
   font-size: 2.5em;
   text-align: center;
-  font-family: "Darrel";
-  margin-bottom: -5%;
+  font-family: "Sangharia";
   animation: autoShowAnimation both;
   animation-timeline: view(70% 5%);
 }
 
-.halaman_c .isi{
+.halaman_c .isiakad{
+  text-align: center;
+  font-size: 0.7em;
+  font-family: Poppins;
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
+}
+/* halaman_d */
+.halaman_d .transisi{
+  animation: autoRotateAnimation;
+  animation-timeline: view();
+  width: 10%;
+}
+
+.halaman_d .transisi_a{
+  width: 10%;
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
+}
+
+.halaman_d .resepsi{
+  font-size: 2.5em;
+  text-align: center;
+  font-family: "Sangharia";
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
+}
+.halaman_d .isiresepsi{
   text-align: center;
   font-size: 0.7em;
   font-family: Poppins;
@@ -254,48 +285,15 @@ body {
   animation-timeline: view(70% 5%);
 }
 
-.halaman_c .transisi{
-  animation: autoRotateAnimation;
-  animation-timeline: view();
-  width: 10%;
-}
-
-.halaman_c .transisi_a{
-  width: 10%;
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-
-.halaman_c .line_akad_b{
+.halaman_d .line_resepsi{
   width: 60%;
-  margin-bottom: 100%;
   animation: autoShowAnimation both;
   animation-timeline: view(70% 5%);
 }
-
-footer {
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  height: 12vw;
-  justify-content: center;
-  align-items: stretch;
-  bottom: 0px;
-  
-}
-
-button{
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #5d0000, #bf0000);
-  color: #fff;
-  border-right: 1px solid #fff;
-  border-left: 1px solid #fff;
-  border-radius: 5px 5px 0px 0px;
-}
-
-button-hover{
-  background: #fff;
+.halaman_d .terimakasih{
+  text-align: center;
+  font-size: 0.9em;
+  font-family: Poppins;
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%);
 }
