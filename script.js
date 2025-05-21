@@ -4,4 +4,6 @@ document.addEventListener('click', function() {
         audio.play();
     });
 
-
+document.getElementById('okee').addEventListener('click', function() {
+  document.getElementById('cover').style.display = 'none';
+});

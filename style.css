@@ -3,7 +3,7 @@ html, body{
 }
 
 @media (orientation:portrait) {
-  .cover, .halaman_a, .halaman_b, .halaman_c, .halaman_d{
+  .cover, .halaman_a, .halaman_b, .halaman_c, .halaman_d, .splash{
     width: 100vw;
     height: 154vw;
     border: 1px solid #f00;
@@ -70,26 +70,9 @@ body {
   align-items: center;
   background: #ffffff;
 }
-
-.splash{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50vw;
-  height: 50vh;
-  background: #fff;
-  justify-content: center;
-  align-items: center;
-}.splash .cnt .spl{
-  width: 25%;
-  
-}
-
 /* cover */
 .cover{
+  position: absolute;
   display: flex;
   background: #5d0000;
   color: #fff;
@@ -98,6 +81,16 @@ body {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  z-index: 1;
+}
+
+.cover #okee{
+  width: 20%;
+  height: 4%;
+  border-radius: 8px;
+  border: 0px;
+  color: #5d0000;
+  background: linear-gradient(to left, #856f43, #eddab0, #fbf6eb, #eddab0, #856f43);
 }
 
 .cover .img_a{
