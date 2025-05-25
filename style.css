@@ -1,63 +1,23 @@
 html, body{
-    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    
 }
 
 @media (orientation:portrait) {
-  .cover, .halaman_a, .halaman_b, .halaman_c, .halaman_d, .splash{
-    width: 100vw;
-    height: 154vw;
-    border: 1px solid #f00;
+  .main{
+    aspect-ratio: 10 / 16;
+    width: 100%;
+    height: auto;
   }
 }
 
 @media (orientation:landscape) {
-  .cover {
-    width: 100vw;
-    height: 165vw;
-  }
-}
-  
-@font-face {
-  font-family: 'Americana';
-  src: url('Americana.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'LovelyHome';
-  src: url('LovelyHome.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Darrel';
-  src: url('Darrel.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('Poppins.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Sangharia';
-  src: url('Sangharia.ttf') format('truetype');
-}
-
-@keyframes autoShowAnimation{
-    from{
-        opacity: 0;
-        transform: translateY(200px) scale(0.3);
-    }to{
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes autoRotateAnimation{
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
+  .main {
+    aspect-ratio: 10 / 16;
+    width: auto;
+    height: 100%;
   }
 }
 
@@ -67,7 +27,7 @@ html, body{
     opacity: 1;
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(0.8);
     opacity: 1;
   }
   100% {
@@ -75,220 +35,132 @@ html, body{
     opacity: 1;
   }
 }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-20%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+  .main{
+    border: 1px solid #f00;
+    overflow: hidden;
+  }
+  /* cover */
+  .main #a {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .main #a .cover {
+    width: 100%;
+    height: 100%;
+    background: #5d0000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
   
-body {
-  width: 100vw;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #ffffff;
-}
-/* cover */
-.cover{
-  position: absolute;
-  display: flex;
-  background: #5d0000;
-  color: #fff;
-  background-size: cover;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.cover #okee{
-  width: 20%;
-  height: 10%;
-  border-radius: 8px;
-  border: 0px;
-  color: #5d0000;
-  background: linear-gradient(to left, #856f43, #eddab0, #fbf6eb, #eddab0, #856f43);
-  margin-top: -10%;
-  animation: pulse 1s infinite;
-}
-
-.cover .img_a{
-  width: 100%;
-  margin-top: 0px;
-}
-
-.cover  .img_b{
-  width: 25%;
+  .main #a .cover .dec_top {
+    width: 100%;
+  }
   
-}
+  .main #a .cover .nama_cover {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   
-.cover .kata_a{
-  font-size: 1.5em;
-  font-family: "Americana";
-}
-
-.cover .kata_b{
-  font-size: 3em;
-  text-align: center;
-  font-family: "Darrel";
-}
-
-.cover .img_c{
-  width: 100%;
-  margin-bottom: 0px;
-}
-
-/* halaman_a */
-.halaman_a{
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-
-.halaman_a, .halaman_b, .halaman_c, 
-.halaman_d{
-  background: linear-gradient(to left, #856f43, #eddab0, #fbf6eb, #eddab0, #856f43);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.halaman_a .qs_a{
-  font-size: 70%;
-  text-align: center;
-  padding: 10%;
-  font-family: "Poppins";
+  .main #a .cover .opn {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: pulse 3s infinite;
+    
+  }
   
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-.halaman_a .qs{
-  font-size: 70%;
-  margin-top: -11%;
+  .main #a .cover .dec_bot {
+    width: 100%;
+    
+  }
   
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-
-/* halaman_b */
-.halaman_b .img_a{
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-}
-.halaman_b .salam, .halaman_b .kata_a, .halaman_c .kata_c{
-  font-size: 0.9em;
-  text-align: center;
-  padding: 10%;
+  /* navigator */
+  .main .navigator {
+    width: 100vw;
+    height: 15vw;
+    background: grey;
+    position: fixed;
+    bottom: 0%;
+    display: block;
+  }
+  /* nav_a */
+  .main .navigator #nav_a {
+    height: 100%;
+    width: auto;
+    border: 10x solid #f00;
+  }
   
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-.halaman_b .kata_a {
-  margin-top: -20%;
-  font-family: "Poppins";
-}
-.halaman_b .img_e{
-  width: 85%;
-  margin-top: -10%;
+  .main .navigator #nav_a img {
+    width: 100%;
+  }
   
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-
-.halaman_b .img_d{
-  width: 15%;
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-
-.halaman_b .nama_a{
-  font-size: 2em;
-  font-family: "LovelyHome";
+  /* halaman_a */
+  .main #b {
+    width: 100%;
+    height: 100%;
+    display: none;
+    animation: bounce 0.8s;
+  visibility: visible;
+  opacity: 1;
+  }
   
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-.halaman_b .nama_b{
-  font-size: 0.7em;
-  text-align: center;
-  padding: 10%;
-  margin-top: -17%;
-  font-family: Poppins;
+  .main #b .home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+  }
   
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-.halaman_b .dan{
-  width: 5%;
-  margin-bottom: -4%;
-  margin-top: -10%;
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-/* halaman_c */
-
-.halaman_c .kata_c{
-  font-family: "Poppins";
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-
-.halaman_c .line_akad{
-  width: 60%;
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-
-.halaman_c .akad{
-  font-size: 2.5em;
-  text-align: center;
-  font-family: "Sangharia";
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-
-.halaman_c .isiakad{
-  text-align: center;
-  font-size: 0.7em;
-  font-family: Poppins;
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-/* halaman_d */
-.halaman_d .transisi{
-  animation: autoRotateAnimation;
-  animation-timeline: view();
-  width: 10%;
-}
-
-.halaman_d .transisi_a{
-  width: 10%;
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-
-.halaman_d .resepsi{
-  font-size: 2.5em;
-  text-align: center;
-  font-family: "Sangharia";
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-.halaman_d .isiresepsi{
-  text-align: center;
-  font-size: 0.7em;
-  font-family: Poppins;
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-
-.halaman_d .line_resepsi{
-  width: 60%;
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
-.halaman_d .terimakasih{
-  text-align: center;
-  font-size: 0.9em;
-  font-family: Poppins;
-  animation: autoShowAnimation both;
-  animation-timeline: view(70% 5%);
-}
+  .main #b .home .corner_top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  .main #b .home .corner_top .corner_l {
+    width: 25%;
+  }
+  
+  .main #b .home .corner_top .corner_r {
+    width: 25%;
+    margin-left: auto;
+  }
+  
+  .main #b .home .corner_bot {
+    width: 80%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .main #b .home .home_item {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50vw;
+    transform: translate(-50%, -50vw);
+  }
